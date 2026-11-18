@@ -6,7 +6,7 @@
 SELECT company, TRIM(company) 
 FROM layoffs_staging2;
 
-#Trim whitespace from the end of the companies
+#Trim whitespace from the beginning and end of the companies
 UPDATE layoffs_staging2
 SET company = TRIM(company);
 
@@ -55,3 +55,6 @@ MODIFY COLUMN `date` DATE;
 #View the whole table.
 SELECT * 
 FROM layoffs_Staging2;
+
+
+
